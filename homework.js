@@ -1,7 +1,7 @@
 class Hamster {
     constructor(owner, name, price) {
-        this.owner = "";
-        this.name = "name";
+        this.owner = owner;
+        this.name = name;
         this.price = 15;
     }
 
@@ -18,54 +18,70 @@ class Hamster {
     }
 };
 
-// console.log(Hamster);
 
-// class Person {
-//     constructor(name, age, height, weight, mood, hamsters, bankAccount) {
-//         this.name = name;
-//         this.age = 0;
-//         this.height = 0;
-//         this.weight = 0;
-//         this.mood = 0;
-//         this.hamsters = [];
-//         this.bankAccount = 0;
-//     }
+class Person {
+    constructor(name, age, height, weight, mood, hamsters, bankAccount) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+        this.mood = mood;
+        this.hamsters = [];
+        this.bankAccount = bankAccount;
+    }
 
-//     getName() {
-//         console.log(this.name);
-//     }
+    getName(name) {
+        console.log(this.name);
+    }
 
-//     getAge() {
-//         console.log(this.age);
-//     }
+    getAge(age) {
+        console.log(this.age);
+    }
 
-//     getWeight() {
-//         console.log(this.weight);
-//     }
+    getWeight(weight) {
+        console.log(this.weight);
+    }
 
-//     greet("Hi, how are you " + Person.name);
+    greet() {
+        return `Hello ${Person.name}`
+    };
 
-//     eat() {
-//         this.weight++;
-//         this.mood++;
-//     }
+    eat(amount) {
+       console.log(this.weight += amount, this.mood++, "Yummy!");
+    }
 
-//     excercise() {
-//         this.weight--;
-//     }
+    excercise(amount) {
+        console.log(this.weight -= amount);
+    }
 
-//     ageUp() {
-//         this.age++;
-//         this.height++;
-//         this.weight++;
-//         this.mood--;
-//         this.bankAccount += 10;
-//     }
+    ageUp(amount) {
+        console.log(this.age += amount,
+        this.height += amount,
+        this.weight += amount,
+        this.mood += amount,
+        this.bankAccount += 10);
+    }
 
-//     buyHamster(Hamster) {
-//         this.hamsters.push(Hamster);
-//         this.mood++;
-//         this.bankAccount - Hamster.getPrice(Hamster);
-//     };
+    buyHamster(Hamster) {
+        console.log(this.hamsters.push(Hamster),
+        this.mood + 10,
+        this.bankAccount - Hamster.getPrice(Hamster));
+    };
+};
 
-// const Timmy = new Person("Timmy", 5);
+
+
+const timmy = new Person("Timmy", 5, 4.0, 50, 20, [], 0);
+
+const Gus = new Hamster("Timmy", "Bear", 15)
+
+timmy.eat(5);
+timmy.excercise(5);
+console.log(timmy);
+timmy.ageUp(9);
+timmy.buyHamster(Gus);
+console.log(timmy);
+timmy.ageUp(15);
+timmy.eat(2);
+timmy.excercise(2);
+console.log(timmy);
