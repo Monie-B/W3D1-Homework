@@ -85,3 +85,30 @@ timmy.ageUp(15);
 timmy.eat(2);
 timmy.excercise(2);
 console.log(timmy);
+
+//------------------------------------
+
+class Dinner {
+    constructor(type, appetizer, entree, dessert) {
+        this.type = type;
+        this.appetizer = appetizer;
+        this.entree = entree;
+        this.dessert = dessert;
+    }
+}
+
+class ChefFactory {
+    constructor(factoryType) { 
+        this.factoryType = factoryType;
+        this.dinnerCollection = [];
+        cook() {
+            console.log("Time to cook!")
+        }
+        foodsReady() {
+            console.log("Your food is ready!")
+        }
+        serve() {
+            console.log("Here")
+        }
+    }
+}
